@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Hồ cá vui nhộn của tui nheee</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="content">
+        <!-- Bảng điều khiển ở góc trên bên phải -->
+        <div id="controls">
+            <button id="btn-bg" onclick="doiCanhNen()">Đổi cảnh nền</button>
+            <button id="btn-pause" onclick="tamDung()">Tạm dừng</button>
+            <button id="btn-food" onclick="thaMoi()">Thả mồi</button>
+            <button id="btn-music" onclick="batTatNhac()">Bật nhạc</button>
+        </div>
+
+        <div id="light-rays"></div>
+
+  
+        <div id="cavoi" class="swim-item">
+            <img src="aquarium/cavoi.png" alt="Cá voi">
+        </div>
+
+        <div id="shark" class="swim-item">
+            <img src="aquarium/shark.png" alt="Cá mập">
+        </div>
+
+    
+        <div id="goldFish" class="swim-item">
+            <img src="aquarium/goldFishSchool.png" alt="Đàn cá vàng">
+        </div>
+
+        <div id="faintFish" class="swim-item">
+            <img src="aquarium/faintSchool.png" alt="Đàn cá nhỏ">
+        </div>
+
+        <div id="cavang" class="swim-item">
+            <img src="aquarium/cavang.png" alt="Cá vàng">
+        </div>
+
+        <div id="caxanh" class="swim-item">
+            <img src="aquarium/caxanh.png" alt="Cá xanh">
+        </div>
+
+     
+        <div id="muc" class="swim-item">
+            <img src="aquarium/muc.png" alt="Mực">
+        </div>
+
+        <div id="su" class="swim-item">
+            <img src="aquarium/su.png" alt="Sứa">
+        </div>
+
+        <div id="diver1" class="swim-item">
+            <img src="aquarium/diver1.png" alt="Thợ lặn 1">
+        </div>
+
+        <div id="diver2" class="swim-item">
+            <img src="aquarium/diver2.png" alt="Thợ lặn 2">
+        </div>
+
+        <div id="diver3" class="swim-item">
+            <img src="aquarium/diver3.png" alt="Thợ lặn 3">
+        </div>
+
+        <div id="turtle" class="swim-item">
+            <img src="aquarium/turtle.png" alt="Rùa biển">
+        </div>
+
+        <div id="cua" class="swim-item">
+            <img src="aquarium/cua.png" alt="Cua biển">
+        </div>
+
+        
+        <div id="decor-bottom">
+            <img src="aquarium/sanho.png" class="coral c1" alt="San hô">
+            <img src="aquarium/so.png" class="clam" alt="Vỏ sò">
+            <img src="aquarium/sanho.png" class="coral c2" alt="San hô">
+        </div>
+
+
+        <div class="bubble b1"></div>
+        <div class="bubble b2"></div>
+        <div class="bubble b3"></div>
+        <div class="bubble b4"></div>
+        <div class="bubble b5"></div>
+    </div>
+
+    <audio id="nhac-nen" loop>
+        <source src="nhacnen.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="javascript.js"></script>
+</body>
+</html>

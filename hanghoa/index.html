@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập Thiết kế Web - Trang 34-36</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .menu {
+            background-color: #005a8c;
+            margin-bottom: 25px;
+            overflow: hidden;
+        }
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .menu ul li {
+            float: left;
+        }
+        .menu ul li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px 18px;
+            font-weight: bold;
+            font-size: 14px;
+            border-right: 1px solid #0077b3;
+        }
+        .menu ul li a:hover,
+        .menu ul li a.active {
+            background-color: #ff6600;
+        }
+        .hh-box {
+            border-radius: 5px;
+            box-shadow: 0 0 5px silver;
+            position: relative;
+            display: inline-block;
+            margin: 25px 10px 10px 5px;
+            padding: 20px 0px 35px 0px;
+            text-align: center;
+            width: 300px;
+            background-color: #ffffff;
+        }
+
+        .hh-box:hover {
+            box-shadow: 0 0 6px red;
+        }
+
+        .hh-box-image {
+            width: 210px;
+            height: 210px;
+            object-fit: contain;
+        }
+
+        .hh-box-icon {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+
+        .hh-box-name {
+            position: absolute;
+            left: 0px;
+            top: -22px;
+            width: inherit;
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .hh-box-price {
+            position: absolute;
+            left: 12px;
+            bottom: 10px;
+            font-weight: bold;
+            font-size: 16px;
+            color: #666666;
+        }
+
+        .hh-box-actions {
+            position: absolute;
+            right: 10px;
+            bottom: 8px;
+            width: 26px;
+        }
+
+        .hh-box-actions img {
+            cursor: pointer;
+            border: 0px;
+            width: 22px;
+            height: 22px;
+            display: block;
+            margin-top: 4px;
+        }
+        .tab-content {
+            display: none;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fafafa;
+            line-height: 1.6;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .tab-content h2 {
+            margin-top: 0;
+            color: #005a8c;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu">
+        <ul>
+            <li><a href="#trang-chu" class="active" onclick="moTab(event, 'trang-chu')">Trang chủ</a></li>
+            <li><a href="#gioi-thieu" onclick="moTab(event, 'gioi-thieu')">Giới thiệu</a></li>
+            <li><a href="#du-an" onclick="moTab(event, 'du-an')">Dự án</a></li>
+            <li><a href="#san-pham" onclick="moTab(event, 'san-pham')">Sản phẩm</a></li>
+            <li><a href="#dich-vu" onclick="moTab(event, 'dich-vu')">Dịch vụ</a></li>
+            <li><a href="#tin-tuc" onclick="moTab(event, 'tin-tuc')">Tin tức</a></li>
+            <li><a href="#lien-he" onclick="moTab(event, 'lien-he')">Liên hệ</a></li>
+        </ul>
+    </div>
+
+    <div id="trang-chu" class="tab-content active">
+        <h2>Sản phẩm nổi bật</h2>
+        <div class="hh-box">
+            <div class="hh-box-name">Nikon D3100</div>
+            <img class="hh-box-image" src="images.jpg" alt="Nikon D3100" />
+            <div class="hh-box-price">$999.99</div>
+            <div class="hh-box-actions">
+                <a href="?mahh=1001" onclick="chonChucNang(event, 'Yêu thích', 1001)">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f59e0b'><path d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z'/></svg>" alt="Favourites" />
+                </a>
+                <a href="?mahh=1001" onclick="chonChucNang(event, 'Gửi thư', 1001)">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%233b82f6'><path d='M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'/></svg>" alt="Letter" />
+                </a>
+                <a href="?mahh=1001" onclick="chonChucNang(event, 'Giỏ hàng', 1001)">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310b981'><path d='M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z'/></svg>" alt="Basket" />
+                </a>
+            </div>
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'><circle cx='30' cy='30' r='28' fill='%23e11d48'/><text x='30' y='35' font-size='14' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>NEW</text></svg>" class="hh-box-icon" width="60" alt="New" />
+        </div>
+    </div>
+
+    
+    <div id="gioi-thieu" class="tab-content">
+        <h2>Giới thiệu cửa hàng</h2>
+        <p>Chào mừng bạn đến với hệ thống bất động sản của Hoàng Anh -5201104007 chuyên cung cấp, buôn bán và  phân phối máy ảnh và thiết bị kỹ thuật số sắp chính hãng.</p>
+        <p>Hoàng Anh - 5201104007 chuyên cung cấp các dòng máy ảnh DSLR, Mirrorless và phụ kiện nhiếp ản, cục sạc với giá rẻ như cho đi kèm với chế độ bảo hành mém  uy tín chứ chưa uy tín hehehe.</p>
+    </div>
+
+    
+    <div id="du-an" class="tab-content">
+        <h2>Dự án tiêu biểu</h2>
+        <ul>
+            <li>Cung cấp thiết bị phòng studio cho các trường THPT và đại học tại TP.HCM. Nói chung là ai cần là tôi sẽ cũng cấp </li>
+            <li>Tài trợ có tính phí máy ảnh cho cuộc thi Nhiếp ảnh trẻ toàn quốc.</li>
+        </ul>
+    </div>
+
+    
+    <div id="san-pham" class="tab-content">
+        <h2>Danh sách sản phẩm</h2>
+        <div class="hh-box">
+            <div class="hh-box-name">Nikon D3100</div>
+            <img class="hh-box-image" src="images.jpg" alt="Nikon D3100" />
+            <div class="hh-box-price">$999.99</div>
+            <div class="hh-box-actions">
+                <a href="?mahh=1001" onclick="chonChucNang(event, 'Yêu thích', 1001)">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f59e0b'><path d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z'/></svg>" alt="Favourites" />
+                </a>
+                <a href="?mahh=1001" onclick="chonChucNang(event, 'Gửi thư', 1001)">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%233b82f6'><path d='M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'/></svg>" alt="Letter" />
+                </a>
+                <a href="?mahh=1001" onclick="chonChucNang(event, 'Giỏ hàng', 1001)">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310b981'><path d='M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z'/></svg>" alt="Basket" />
+                </a>
+            </div>
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'><circle cx='30' cy='30' r='28' fill='%23e11d48'/><text x='30' y='35' font-size='14' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>NEW</text></svg>" class="hh-box-icon" width="60" alt="New" />
+        </div>
+    </div>
+
+    
+    <div id="dich-vu" class="tab-content">
+        <h2>Dịch vụ của Hoàng Anh-5201104007</h2>
+        <ul>
+            <li><strong>Bảo dưỡng & Vệ sinh cảm biến:</strong> Miễn phí không trọn đời có thời hạn cho khách mua máy tại cửa hàng khác.</li>
+            <li><strong>Cho thuê ống kính:</strong> Đa dạng các loại lens góc rộng, tele theo ngày.</li>
+            <li><strong>Thu mới đổi cũ:</strong> Hỗ trợ nâng cấp đời máy với mức trợ giá hơi tốt nhất.</li>
+        </ul>
+    </div>
+
+    
+    <div id="tin-tuc" class="tab-content">
+        <h2>Tin tức & Kinh nghiệm nhiếp ảnh</h2>
+        <p><strong>1. Hướng dẫn sử dụng Nikon D3100 cho người mới bắt đầu:</strong> Cách chỉnh khẩu độ, tốc độ màn trập và ISO cơ bản.</p>
+        <p><strong>2. Khuyến mãi tháng này:</strong> Giảm ngay 1% khi mua kèm thẻ nhớ và túi đựng máy ảnh.</p>
+    </div>
+
+  
+    <div id="lien-he" class="tab-content">
+        <h2>Thông tin liên hệ</h2>
+        <p><strong>Địa chỉ:</strong> ĐH Sư Phạm TP.HCM, 280 An Dương Vương, P. Chợ Quán, TP. Hồ Chí Minh</p>
+        <p><strong>Điện thoại:</strong> 0909 123 456</p>
+        <p><strong>Email:</strong> hoanganh-5201104007@company.com</p>
+    </div>
+
+   
+    <script>
+        function moTab(event, tabId) {
+            event.preventDefault();
+
+            const tatCaTab = document.querySelectorAll('.tab-content');
+            tatCaTab.forEach(tab => tab.classList.remove('active'));
+
+            const tatCaMenu = document.querySelectorAll('.menu ul li a');
+            tatCaMenu.forEach(link => link.classList.remove('active'));
+
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+
+        function chonChucNang(event, tenChucNang, maHangHoa) {
+            event.preventDefault();
+            alert("Bạn đã chọn chức năng: " + tenChucNang + " cho sản phẩm Nikon D3100 (Mã HH: " + maHangHoa + ")");
+        }
+    </script>
+
+</body>
+</html>

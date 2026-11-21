@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Cá Nhân - Hà Lê Hoàng Anh</title>
+   
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   
+    <div class="toolbar">
+        <div class="toolbar-group">
+            <span class="toolbar-label">Màu nhấn:</span>
+            <div class="color-dot" style="background: #d83a74;" onclick="changeAccent('#d83a74')" title="Hồng Pastel"></div>
+            <div class="color-dot" style="background: #555555;" onclick="changeAccent('#555555')" title="Đen Trắng"></div>
+            <div class="color-dot" style="background: #0d9488;" onclick="changeAccent('#0d9488')" title="Xanh Ngọc"></div>
+            <div class="color-dot" style="background: #2563eb;" onclick="changeAccent('#2563eb')" title="Xanh Dương"></div>
+        </div>
+        <div class="toolbar-group">
+            <source>
+          
+       
+        </div>
+    </div>
+
+  
+    <div class="cv-container">
+        
+     
+        <aside class="left-column">
+           
+            <div class="avatar-wrapper" onclick="document.getElementById('avatarInput').click()" title="Nhấn để tải ảnh lên">
+                <img id="avatarPreview" src="avatar2.jpg" alt="Hà Lê Hoàng Anh">
+                <div class="avatar-overlay">
+                    <i class="fa-solid fa-upload"></i>
+                    <span>Tải ảnh lên</span>
+                </div>
+            </div>
+
+            <div class="left-section">
+                <h3>About Me</h3>
+                <p class="about-text">
+                    Hà Lê Hoàng Anh (Tí), sinh năm 2007, hiện đang là sinh viên năm nhất ngành Công nghệ thông tin tại Đại học Sư phạm TP. Hồ Chí Minh. Là cựu học sinh trường THPT Tây Thạnh (quận Tân Phú). Mình là một người năng nổ, đam mê thể thao (đặc biệt là bóng đá), yêu thích rèn luyện sức khỏe, diễn kịch và tích cực tham gia các hoạt động văn nghệ
+                </p>
+            </div>
+
+            <div class="left-section">
+                <h3>Contact Us</h3>
+                <ul class="contact-list">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>TP. Hồ Chí Minh, Việt Nam</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>0822097855</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Titeo08@gmail.com</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-facebook"></i>
+                        <span>FB: <a href="#" target="_blank">Ti Teo</a></span>
+                    </li>
+                </ul>
+            </div>
+
+           
+            <div class="left-section">
+                <h3>Skills</h3>
+                <div class="skill-item">
+                    <div class="skill-name"><span>HTML5 & CSS3</span><span>70%</span></div>
+                    <div class="skill-bar"><div class="skill-fill" data-width="70%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name"><span>JavaScript</span><span>75%</span></div>
+                    <div class="skill-bar"><div class="skill-fill" data-width="75%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name"><span>C / C++ Cơ bản</span><span>65%</span></div>
+                    <div class="skill-bar"><div class="skill-fill" data-width="65%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name"><span>Truyền thông & Media</span><span>85%</span></div>
+                    <div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div>
+                </div>
+            </div>
+
+           
+            <div class="left-section">
+                <h3>Activities & Clubs</h3>
+                <div class="ref-item">
+                    <strong>CLB ITMedia - Khoa CNTT</strong>
+                    <span>Vị trí: Thành viên Ban Truyền thông</span>
+                    <span>ĐH Sư phạm TP.HCM</span>
+                </div>
+                <div class="ref-item">
+                    <strong>CLB Kịch Nghệ HCMUE</strong>
+                    <span>Vị trí: Thành viên ban diễn viên của CLB Kịch Nghệ</span>
+                    <span>ĐH Sư phạm TP.HCM</span>
+                </div>
+            </div>
+        </aside>
+
+      
+        <main class="right-column">
+           
+            <header class="cv-header">
+                <h1>HÀ LÊ HOÀNG ANH - Tí</h1>
+                <div class="subtitle">Title: SINH VIÊN CÔNG NGHỆ THÔNG TIN (IT STUDENT)</div>
+            </header>
+
+            
+            <section>
+                <div class="right-section-title">
+                    <h2>Education</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-title">Đại học Sư phạm TP.HCM (HCMUE)</div>
+                    <div class="timeline-sub">Sinh viên năm nhất — Chuyên ngành Công nghệ thông tin</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-title">Trường THPT Tây Thạnh (Quận Tân Phú, TP.HCM)</div>
+                    <div class="timeline-sub">Cựu học sinh — Tích cực tham gia phong trào thể thao & văn nghệ</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-title">Trường THCS Bình Hưng Hòa & Trường TH Trần Văn Ơn</div>
+                    <div class="timeline-sub">Hoàn thành chương trình giáo dục phổ thông cơ sở & tiểu học</div>
+                </div>
+            </section>
+
+          
+            <section>
+                <div class="right-section-title">
+                    <h2>Coursework (Kỳ 1 - 2026)</h2>
+                    <div class="line"></div>
+                </div>
+                <ul class="bullet-list">
+                    <li><strong>Nhập môn Lập trình cơ bản (C/C++)</strong></li>
+                    <li><strong>Lập trình Web cơ bản (HTML, CSS, JavaScript)</strong> <span class="tag-note">(Môn ám ảnh và khó nhất huhu)</span></li>
+                    <li><strong>Cơ sở toán & Toán rời rạc</strong></li>
+                    <li><strong>Tiếng Anh chuyên ngành</strong></li>
+                    <li><strong>Tâm lý học đại cương</strong></li>
+                    <li><strong>Triết học</strong> <span class="tag-note">(Môn siêu trừu tượng)</span></li>
+                </ul>
+            </section>
+
+            
+            <section>
+                <div class="right-section-title">
+                    <h2>Research & Publications</h2>
+                    <div class="line"></div>
+                </div>
+                <ul class="bullet-list">
+                    <li>Tìm hiểu thiết kế giao diện web responsive với HTML5, CSS3 và JavaScript.</li>
+                    <li>Khám phá cách tổ chức cấu trúc dữ liệu và thuật toán cơ bản trong ứng dụng thực tế.</li>
+                    <li>Nghiên cứu và tìm hiểu cách đăng bài trên GitHub.</li>
+                    <li><strong>Báo cáo tiểu luận:</strong> Môn Lập trình Web cơ bản (cập nhật).</li>
+                    <li><strong>Bài tập lớn:</strong> Thuyết trình môn Triết học & Lập trình cơ bản trên Upcoder.</li>
+                </ul>
+            </section>
+
+           
+            <section>
+                <div class="right-section-title">
+                    <h2>Projects</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="project-card">
+                    <strong>Website Hồ cá (6.1.1)</strong>
+                    <p>Trang web mô phỏng hồ cá và làm cho mấy con cá biết bơi bằng HTML/CSS/JS.</p>
+                </div>
+                <div class="project-card">
+                    <strong>CV Cá nhân (6.1.3)</strong>
+                    <p>Trang giới thiệu bản thân (porfolio cá nhân) và đẩy lên GitHub Pages.</p>
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+   
+    <script src="script.js"></script>
+</body>
+</html>
